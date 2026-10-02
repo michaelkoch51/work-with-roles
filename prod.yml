@@ -1,0 +1,18 @@
+all:
+  children:
+    clickhouse:
+      hosts:
+        clickhouse-01:
+          ansible_host: 127.0.0.1
+    vector:
+      hosts:
+        vector-01:
+          ansible_host: 127.0.0.1
+    lighthouse:
+      hosts:
+        lighthouse-01:
+          ansible_host: 127.0.0.1
+  vars:
+    ansible_user: yc-user
+    ansible_ssh_private_key_file: ~/.ssh/ansible-key
+    ansible_ssh_common_args: '-o StrictHostKeyChecking=no'

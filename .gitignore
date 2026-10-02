@@ -1,0 +1,4 @@
+roles/
+files/
+*.log
+*.retry
